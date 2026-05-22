@@ -1,0 +1,26 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  display : flex;
+  place-items : center;
+  min-height: 100vh; 
+  background: radial-gradient(...);
+}
+.calculator {width:340px;
+             background: #ffffff;
+             border-radius : 28px;
+             padding : 24px;
+             box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0;08);
+             display: flex;
+             }
+
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 10px;
+button:active { transform: scale(0.92); }
+.btn-equals { grid-column: span 2; }
+
+
+
+
+
+
