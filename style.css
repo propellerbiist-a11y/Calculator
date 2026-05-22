@@ -1,23 +1,135 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  display : flex;
-  place-items : center;
-  min-height: 100vh; 
-  background: radial-gradient(...);
-}
-.calculator {width:340px;
-             background: #ffffff;
-             border-radius : 28px;
-             padding : 24px;
-             box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0;08);
-             display: flex;
-             }
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
 
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 10px;
-button:active { transform: scale(0.92); }
-.btn-equals { grid-column: span 2; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+  background: radial-gradient(ellipse at 60% 40%, #fff9c4 0%, #fff176 55%, #ffe57f 100%);
+}
+
+.calculator {
+  width: 340px;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.display {
+  background: #1e1e2e;
+  border-radius: 16px;
+  padding: 16px 20px;
+  text-align: right;
+  overflow: hidden;
+}
+
+.expression {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+  min-height: 1.2em;
+  word-break: break-all;
+}
+
+.current-value {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  cursor: pointer;
+  padding: 18px 0;
+  transition: transform 0.13s, box-shadow 0.13s, filter 0.13s;
+  user-select: none;
+  position: relative;
+}
+
+button:active {
+  transform: scale(0.92);
+  box-shadow: none !important;
+}
+
+.btn-number {
+  background: #e8eaf6;
+  color: #3949ab;
+  box-shadow: 0 4px 0 #b3b9e8;
+}
+.btn-number:hover {
+  filter: brightness(0.95);
+}
+
+.btn-operator {
+  background: #fff3e0;
+  color: #e65100;
+  box-shadow: 0 4px 0 #ffcc80;
+  font-size: 1.35rem;
+}
+.btn-operator:hover {
+  filter: brightness(0.95);
+}
+
+.btn-clear {
+  background: #ffebee;
+  color: #c62828;
+  box-shadow: 0 4px 0 #ef9a9a;
+}
+.btn-clear:hover {
+  filter: brightness(0.95);
+}
+
+.btn-backspace {
+  background: #fce4ec;
+  color: #ad1457;
+  box-shadow: 0 4px 0 #f48fb1;
+}
+.btn-backspace:hover {
+  filter: brightness(0.95);
+}
+
+.btn-percent {
+  background: #e0f2f1;
+  color: #00695c;
+  box-shadow: 0 4px 0 #80cbc4;
+}
+.btn-percent:hover {
+  filter: brightness(0.95);
+}
+
+.btn-equals {
+  background: linear-gradient(135deg, #ff6f61 0%, #ff3d00 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 0 #bf360c;
+  grid-column: span 2;
+  font-size: 1.4rem;
+}
+.btn-equals:hover {
+  filter: brightness(1.08);
+}
 
 
 
