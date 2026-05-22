@@ -1,0 +1,38 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  display : flex;
+  place-items : center;
+  min-height: 100vh; 
+  background: radial-gradient(...);
+}
+.calculator {width:340px;
+             background: #ffffff;
+             border-radius : 28px;
+             padding : 24px;
+             box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0;08);
+             display: flex;
+             }
+
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 10px;
+button:active { transform: scale(0.92); }
+.btn-equals { grid-column: span 2; }
+
+
+
+
+
+
+/* this is called universal selector- target each and every html element in the entirepage */
+/* evry html element id a rectanguler box made up of margin, border, padding, content */
+/*by default width is width + padding + border */
+/* but the box sizing border-box ensures that that padding and border are includedin total width and the box shrinks inwards rather than getting oversized */
+/* margin is space between the elemnet and other element and padding is the space between the border and content of an element */
+/* For every single element on this page: make widths predictable by including padding and border inside the width, and remove all default spacing so I start with a perfectly clean, consistent layout*/
+/* min height means that the the boxcan get taller if more content isthere but noyshorter than this */
+/* The white card. border-radius rounds corners. box-shadow gives it a floating shadow */
+/* This creates the button grid. repeat(4, 1fr) = 4 equal columns. gap = spacing between buttons.*/
+/*:active triggers while the button is being pressed. scale(0.92) shrinks it slightly — simulates a physical click      */
+/* Makes the = button take up 2 columns wide (just like a real calculator) */
+
