@@ -2,34 +2,49 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title> Calculator </title>
-<body>
-<div class="calculator">
-<div class="display">
- <div class="expression" id="expression"> &nbsp;</div>
- <div class="current-value" id="current">0</div>
-</div>
-<button class="btn-clear" onclick="clearDisplay()">AC</button>
-</body> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colourful Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
+
+    <div class="calculator">
+
+        <input type="text" id="display" readonly>
+
+        <div class="buttons">
+
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="operator" onclick="appendValue('/')">/</button>
+            <button class="operator" onclick="appendValue('*')">*</button>
+            <button class="operator" onclick="appendValue('-')">-</button>
+
+            <button class="num" onclick="appendValue('7')">7</button>
+            <button class="num" onclick="appendValue('8')">8</button>
+            <button class="num" onclick="appendValue('9')">9</button>
+            <button class="operator" onclick="appendValue('+')">+</button>
+
+            <button class="num" onclick="appendValue('4')">4</button>
+            <button class="num" onclick="appendValue('5')">5</button>
+            <button class="num" onclick="appendValue('6')">6</button>
+            <button class="equal" onclick="calculate()">=</button>
+
+            <button class="num" onclick="appendValue('1')">1</button>
+            <button class="num" onclick="appendValue('2')">2</button>
+            <button class="num" onclick="appendValue('3')">3</button>
+            <button class="num" onclick="appendValue('.')">.</button>
+
+            <button class="num zero" onclick="appendValue('0')">0</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-  <!-- this tells the browser that it is a modern html file -->
-  <!-- tells that the language is english -->
-  <!-- meta means meta data which is data of data. it tells to use the character set of UTF-8 that supports every language on earth-->
-  <!-- viewport is the visible area of the screen, width=device-width means make the page as wide as the device screen -->
-  <!-- initial-scale=1.0 means "don't zoom in or out at the start" -->
-  <!-- div is an invisible box and class name links it to css. The entire calculator to come in this box -->
-  <!-- we want to create displat box with two two small boxes in it, one showing history of expression and other 
-  
